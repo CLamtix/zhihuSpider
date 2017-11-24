@@ -58,17 +58,17 @@ public class Grabber {
 		JSONObject result = null;
 		try {
 			HttpGet httpGet = new HttpGet(url);
-			httpGet.setHeader("Accept", "application/json, text/plain, */*");
-			httpGet.setHeader("Accept-Encoding", "gzip, deflate, br");
-			httpGet.setHeader("Accept-Language", "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2");
+//			httpGet.setHeader("Accept", "application/json, text/plain, */*");
+//			httpGet.setHeader("Accept-Encoding", "gzip, deflate, br");
+//			httpGet.setHeader("Accept-Language", "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2");
 			httpGet.setHeader("authorization", "oauth c3cef7c66a1843f8b3a9e6a1e3160e20");
-			httpGet.setHeader("Cache-Control", "max-age=0");
-			httpGet.setHeader("Connection", "keep-alive");
-			httpGet.setHeader("Host", "www.zhihu.com");
-			httpGet.setHeader("origin", "https://www.zhihu.com");
-			httpGet.setHeader("Referer","https://www.zhihu.com/question/67473950");
-			httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0");
-			httpGet.setHeader("x-udid", "AEDCjr5RZgyPTmuvD_z1FvOGdAxqqKf6n7A=");
+//			httpGet.setHeader("Cache-Control", "max-age=0");
+//			httpGet.setHeader("Connection", "keep-alive");
+//			httpGet.setHeader("Host", "www.zhihu.com");
+//			httpGet.setHeader("origin", "https://www.zhihu.com");
+//			httpGet.setHeader("Referer","https://www.zhihu.com/question/67473950");
+//			httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0");
+//			httpGet.setHeader("x-udid", "AEDCjr5RZgyPTmuvD_z1FvOGdAxqqKf6n7A=");
 			CloseableHttpResponse response = httpclient.execute(httpGet);
 
 			try {

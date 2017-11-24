@@ -18,6 +18,7 @@ public class BeanFactory {
 	
 	public static CloseableHttpClient httpclient;
 	
+	public static Grabber parser;
 	public static CloseableHttpClient createSSLInsecureClient() {
 		if(httpclient!=null){
 			return httpclient;
@@ -43,5 +44,12 @@ public class BeanFactory {
 			e.printStackTrace();
 		}
 		return HttpClients.createDefault();
+	}
+
+	public static Grabber getParser() {
+		if(parser!=null){
+			return parser;
+		}
+		return new Grabber();
 	}
 }

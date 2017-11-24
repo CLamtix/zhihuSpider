@@ -2,8 +2,8 @@ package com.spider.action;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/safeguard")
 public class SafeguardAction {
 	
-	private static Log log = LogFactory.getLog(SafeguardAction.class);
+	public static final Logger log = LoggerFactory.getLogger(SafeguardAction.class);
 	
 	@RequestMapping(value="admin", method = RequestMethod.GET)
 	public String list(String videoName,HttpServletRequest request,ModelMap modelMap){
